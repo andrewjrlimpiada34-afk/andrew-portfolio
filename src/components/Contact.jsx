@@ -1,5 +1,7 @@
 import { useState } from 'react'
-import { Mail, Link2, SendHorizontal } from 'lucide-react'
+import { Mail, SendHorizontal } from 'lucide-react'
+import githubIcon from '../../img/github.png'
+import linkedinIcon from '../../img/linkedin.png'
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
@@ -35,11 +37,13 @@ export default function Contact() {
             <div>
               <h3 className="text-xl font-semibold text-white">Socials</h3>
               <div className="mt-4 flex flex-wrap gap-3">
-                <a href="https://github.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-3xl bg-slate-800/90 px-4 py-3 text-sm text-slate-100 transition hover:bg-slate-700">
-                  <Link2 size={18} /> GitHub
+                <a href="https://github.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl bg-slate-800/90 px-4 py-3 text-sm text-slate-100 transition hover:bg-slate-700">
+                  <img src={githubIcon} alt="GitHub" className="h-5 w-5" />
+                  GitHub
                 </a>
-                <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-3xl bg-slate-800/90 px-4 py-3 text-sm text-slate-100 transition hover:bg-slate-700">
-                  <Link2 size={18} /> LinkedIn
+                <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-3 rounded-3xl bg-slate-800/90 px-4 py-3 text-sm text-slate-100 transition hover:bg-slate-700">
+                  <img src={linkedinIcon} alt="LinkedIn" className="h-5 w-5" />
+                  LinkedIn
                 </a>
               </div>
             </div>

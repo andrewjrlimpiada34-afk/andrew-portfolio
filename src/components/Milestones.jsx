@@ -1,5 +1,12 @@
 import { motion } from 'framer-motion'
 import milestones from '../data/milestones.js'
+import MarsuIcon from '../../img/marsu.png'
+import MscIcon from '../../img/msc.png'
+
+const milestoneIcons = {
+  marsu: MarsuIcon,
+  msc: MscIcon,
+}
 
 export default function Milestones() {
   return (
@@ -23,9 +30,16 @@ export default function Milestones() {
             className="glass-panel rounded-[2rem] border border-white/10 bg-slate-950/80 p-6 shadow-xl shadow-slate-950/15 backdrop-blur-2xl"
           >
             <div className="flex flex-wrap items-center justify-between gap-4">
-              <div>
-                <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-                <p className="mt-2 text-slate-400">{item.description}</p>
+              <div className="flex items-center gap-4">
+                {item.icon && (
+                  <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-slate-900/80 p-3">
+                    <img src={milestoneIcons[item.icon]} alt={item.title} className="h-full w-full object-contain" />
+                  </div>
+                )}
+                <div>
+                  <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+                  <p className="mt-2 text-slate-400">{item.description}</p>
+                </div>
               </div>
               <span className="rounded-3xl bg-violet-500/15 px-4 py-2 text-sm text-violet-200">
                 {item.year}

@@ -3,6 +3,7 @@ const milestones = [
     year: '2021',
     title: 'Graduated in Computer Engineering',
     description: 'Completed a degree focused on software systems, embedded design, and digital logic.',
+    icon: 'marsu',
   },
   {
     year: '2022',
@@ -13,6 +14,7 @@ const milestones = [
     year: '2023',
     title: 'Launched three web apps',
     description: 'Delivered multi-page applications with modern stack choices and polished deployment readiness.',
+    icon: 'msc',
   },
   {
     year: '2024',

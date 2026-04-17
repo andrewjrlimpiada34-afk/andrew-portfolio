@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, ExternalLink } from 'lucide-react'
 
-export default function ProjectCard({ project, active }) {
+export default function ProjectCard({ project, variant = 'active' }) {
+  const variantClasses =
+    variant === 'active'
+      ? 'bg-slate-950/95 shadow-xl shadow-slate-950/20'
+      : 'bg-slate-900/80 filter blur-sm brightness-90 opacity-80 shadow-slate-950/10'
+
   return (
-    <motion.div
-      layout
-      className={`group relative rounded-[2rem] border border-white/10 p-6 transition ${active ? 'bg-slate-950/95' : 'bg-slate-900/80 blur-sm opacity-80'}`}
-    >
+    <motion.div layout className={`group relative rounded-[2rem] border border-white/10 p-6 transition ${variantClasses}`}>
       <div className="absolute -left-4 top-8 h-24 w-24 rounded-full bg-cyan-400/10 blur-2xl" />
       <div className="relative space-y-4">
         <span className="inline-flex rounded-full bg-cyan-500/10 px-3 py-1 text-xs uppercase tracking-[0.24em] text-cyan-200">
