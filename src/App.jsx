@@ -8,6 +8,7 @@ import Skills from './components/Skills.jsx'
 import Hobbies from './components/Hobbies.jsx'
 import Milestones from './components/Milestones.jsx'
 import Contact from './components/Contact.jsx'
+import Footer from './components/Footer.jsx'
 import Loader from './components/Loader.jsx'
 import ScrollProgress from './components/ScrollProgress.jsx'
 import BinaryRain from './components/BinaryRain.jsx'
@@ -84,7 +85,9 @@ function AppContent() {
           <Projects />
           <Contact />
         </motion.div>
+      <Footer />
       </main>
+      <Footer />
     </div>
   )
 }

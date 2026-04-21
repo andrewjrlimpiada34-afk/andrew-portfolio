@@ -73,7 +73,7 @@ export default function Projects() {
                     <motion.div
                       initial={{ opacity: 0.4, y: 20, scale: 0.95 }}
                       animate={{ opacity: 0.9, y: 0, scale: 0.96 }}
-                      className="glass-panel rounded-[2rem] border border-white/10 bg-slate-900/80 p-4 shadow-xl shadow-slate-950/10 backdrop-blur-2xl filter blur-sm brightness-90"
+                      className="glass-panel rounded-[2rem] border border-white/10 bg-slate-900/80 p-3 shadow-xl shadow-slate-950/10 backdrop-blur-2xl filter blur-sm brightness-90 sm:p-4"
                     >
                       <ProjectCard project={projects[prevIndex]} variant="neighbor" />
                     </motion.div>
@@ -81,7 +81,7 @@ export default function Projects() {
                     <motion.div
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
-                      className="glass-panel rounded-[2rem] border border-white/10 bg-slate-950/95 p-4 shadow-xl shadow-slate-950/20 backdrop-blur-2xl"
+                      className="glass-panel rounded-[2rem] border border-white/10 bg-slate-950/95 p-3 shadow-xl shadow-slate-950/20 backdrop-blur-2xl sm:p-4"
                     >
                       <ProjectCard project={activeProject} variant="active" />
                     </motion.div>
@@ -89,7 +89,7 @@ export default function Projects() {
                     <motion.div
                       initial={{ opacity: 0.4, y: 20, scale: 0.95 }}
                       animate={{ opacity: 0.9, y: 0, scale: 0.96 }}
-                      className="glass-panel rounded-[2rem] border border-white/10 bg-slate-900/80 p-4 shadow-xl shadow-slate-950/10 backdrop-blur-2xl filter blur-sm brightness-90"
+                      className="glass-panel rounded-[2rem] border border-white/10 bg-slate-900/80 p-3 shadow-xl shadow-slate-950/10 backdrop-blur-2xl filter blur-sm brightness-90 sm:p-4 sm:p-4"
                     >
                       <ProjectCard project={projects[nextIndex]} variant="neighbor" />
                     </motion.div>
