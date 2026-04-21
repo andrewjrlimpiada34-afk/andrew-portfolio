@@ -13,14 +13,14 @@ export default function SkillModal({ skill, isOpen, onClose }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+            className="fixed inset-0 z-40 flex items-center justify-center bg-black/60 backdrop-blur-sm"
           />
           <motion.div
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-x-4 top-1/2 z-50 w-auto max-w-lg -translate-y-1/2 rounded-[2rem] border border-white/10 bg-slate-950/95 p-8 shadow-2xl backdrop-blur-2xl sm:inset-x-auto sm:left-1/2 sm:right-auto sm:-translate-x-1/2"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ duration: 0.3, type: 'spring', damping: 20 }}
+            className="fixed left-1/2 top-1/2 z-50 w-[90vw] max-w-lg -translate-x-1/2 -translate-y-1/2 rounded-[2rem] border border-white/10 bg-slate-950/98 p-8 shadow-2xl shadow-black/50 backdrop-blur-2xl"
           >
             <button
               type="button"

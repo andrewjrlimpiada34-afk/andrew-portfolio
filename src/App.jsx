@@ -85,7 +85,6 @@ function AppContent() {
           <Projects />
           <Contact />
         </motion.div>
-      <Footer />
       </main>
       <Footer />
     </div>
